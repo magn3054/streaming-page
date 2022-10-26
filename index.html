@@ -8,52 +8,20 @@
     </title> 
     <style>
     :root{
-      --topline: 30%;
-      --botline: 70%
+      --padding: 6.24%;
+      --paddingflix: 9.9%;
+      --duration: 5s;
+
+      --netflixY: calc(50% - 37.5%); 
+      --netflixX: calc(50% - 12.5%);
+      --disneyY: calc(50% - 12.5%);
+      --disneyX: calc(50% + 12.5%);
+      --tv2Y: calc(50% + 12.5%); 
+      --tv2X: calc(50% - 12.5%);
+      --hboY: calc(50% - 12.5%); 
+      --hboX: calc(50% - 37.5%);
     }
-        .center {
-          margin: 0;
-          position: fixed;
-          width: 100%;
-          height: 100%
-        }
-
-        .centernetflix {
-          margin: 0;
-          position: absolute;
-          top: 50%;
-          left: 35%;
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-        }
-
-        .centerhbo {
-          margin: 0;
-          position: absolute;
-          top: var(--topline);
-          left: 50%;
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-        }
-
-        .centerdisney {
-          margin: 0;
-          position: absolute;
-          top: 50%;
-          left: 68%;
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-        }
-
-        .centertv2 {
-          margin: 0;
-          position: absolute;
-          top: var(--botline);
-          left: 50%;
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-        }
-
+    
         body {
           height: 100%;
           margin: 0;
@@ -68,38 +36,122 @@
           max-width: 100%;
         }
 
+        .center {
+          top: 0%;
+          left: 0%;
+          margin: 0;
+          position: fixed;
+          width: 100%;
+          height: 100%
+        }
+
+        .netflix {
+          height:200px;
+          margin: 0;
+          position: absolute;
+          top: calc(50% - 37.5%);
+          left: calc(50% - 12.5%);
+          animation-name: netflix_pos;
+          animation-duration: var(--duration);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; 
+        }
+
+        .hbo {
+          height:200px;
+          margin: 0;
+          position: absolute;
+          top: calc(50% - 12.5%);
+          left: calc(50% - 37.5%);
+          animation-name: hbo_pos;
+          animation-duration: var(--duration);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; 
+        }
+
+        .disney {
+          height:200px;
+          margin: 0;
+          position: absolute;
+          top: calc(50% - 12.5%);
+          left: calc(50% + 12.5%);
+          animation-name: disney_pos;
+          animation-duration: var(--duration);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; 
+        }
+
+        .tv2 {
+          height:200px;
+          margin: 0;
+          position: absolute;
+          top: calc(50% + 12.5%);
+          left: calc(50% - 12.5%);
+          animation-name: tv2_pos;
+          animation-duration: var(--duration);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; 
+        }
+
+        @keyframes netflix_pos {
+          0%   {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
+          25%  {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
+          50%  {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
+          75%  {top: var(--hboY); left: var(--hboX);}         /*hbo*/
+          100% {top: var(--netflixY); left: var(--netflixX);} /*=0%*/
+        }
+        @keyframes disney_pos {
+          75%  {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
+          0%   {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
+          25%  {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
+          50%  {top: var(--hboY); left: var(--hboX);}         /*hbo*/
+          100% {top: var(--disneyY); left: var(--disneyX);}   /*=0%*/
+        }
+        @keyframes tv2_pos {
+          50%  {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
+          75%  {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
+          0%   {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
+          25%  {top: var(--hboY); left: var(--hboX);}         /*hbo*/
+          100% {top: var(--tv2Y); left: var(--tv2X);}         /*=0%*/
+        }
+        @keyframes hbo_pos {
+          25%  {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
+          50%  {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
+          75%  {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
+          0%   {top: var(--hboY); left: var(--hboX);}         /*hbo*/
+          100% {top: var(--hboY); left: var(--hboX);}         /*=0%*/
+        }
 
     </style>   
 </head>
-
-
 
 
 <body> <!--— This is where the content of the page goes.-->
   
   <div class="center">
     <img src="zurf.JPG">
-    <div class="centernetflix">
-    <a href="https://www.netflix.com/browse">                
-        <img src="Netflix_logo.png" alt="Link to Netflix"         
-        style="height:200px;"> <!-- H x 0,55 -->
-      </a> </div>
-    <div class="centerhbo">
-    <a href="https://play.hbomax.com/page/urn:hbo:page:home">
-      <img src="HBO_logo.png" alt="Link to HBO" 
-      style="height:200px;"> <!-- H x 1 -->
-    </a> </div>
-    <div class="centerdisney">
-    <a href="https://www.disneyplus.com/en-gb/home">
-      <img src="Disney+_logo.png" alt="Link to Disney+"
-      style="height:200px;"> <!-- H x 1,77 -->
-    </a> </div>
-    <div class="centertv2">
-      <a href="https://play.tv2.dk/">
-        <img src="TV2_logo.png" alt="Link to TV2play"
-        style="height:200px;"> <!-- H x 1,77 -->
-      </a> </div>
   </div>
+
+    <div class="netflix">
+    <a href="https://www.netflix.com/browse">                
+        <img src="Netflix_logo.png" alt="Link to Netflix"> <!-- H x 0,55 -->
+      </a> </div>
+
+    <div class="disney">
+      <a href="https://www.disneyplus.com/en-gb/home">
+        <img src="Disney+_logo.png" alt="Link to Disney+"> <!-- H x 1,77 -->
+      </a> </div>
+
+    <div class="tv2">
+        <a href="https://play.tv2.dk/">
+          <img src="TV2_logo.png" alt="Link to TV2play"> <!-- H x 1 -->
+    </a> </div>
+
+    <div class="hbo">
+    <a href="https://play.hbomax.com/page/urn:hbo:page:home">
+      <img src="HBO_logo.png" alt="Link to HBO"> <!-- H x 1 -->
+    </a> </div>
+
 
 </body>
 </html>
