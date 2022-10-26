@@ -1,0 +1,118 @@
+<!DOCTYPE html> <!--This tag specifies the language you will write on the page. In this case, the language is HTML 5. -->
+
+<!-- LINKS
+https://www.netflix.com/browse
+https://www.disneyplus.com/en-gb/home
+https://play.hbomax.com/page/urn:hbo:page:home
+-->
+
+
+<html> <!--— This tag signals that from here on we are going to write in HTML code.-->
+
+<head> <!--— This is where all the metadata for the page goes — stuff mostly meant for search engines and other computer programs. -->
+    <title>
+        <meta charset="UTF-8"> 
+        <meta name="description" content="This field contains information about your page. It is usually around two sentences long.">. 
+        <meta name="author" content="Magnus D.C.">
+    </title> 
+    <style>
+    :root{
+      --topline: 30%;
+      --botline: 70%
+    }
+        .center {
+          margin: 0;
+          position: fixed;
+          width: 100%;
+          height: 100%
+        }
+
+        .centernetflix {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 32%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+
+        .centerhbo {
+          margin: 0;
+          position: absolute;
+          top: var(--topline);
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+
+        .centerdisney {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 70%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+
+        .centertv2 {
+          margin: 0;
+          position: absolute;
+          top: var(--botline);
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+
+        body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        } 
+
+        img {
+          padding: 0;
+          display: flex;
+          margin: 0 auto;
+          height: auto;
+          max-width: 100%;
+        }
+
+
+    </style>   
+</head>
+
+
+
+
+<body> <!--— This is where the content of the page goes.-->
+  
+  <div class="center">
+    <img src="zurf.JPG">
+    <div class="centernetflix">
+    <a href="https://www.netflix.com/browse">                
+        <img src="Netflix_logo.png" alt="Link to Netflix"         
+        style="height:200px;"> <!-- H x 0,55 -->
+      </a> </div>
+    <div class="centerhbo">
+    <a href="https://play.hbomax.com/page/urn:hbo:page:home">
+      <img src="HBO_logo.png" alt="Link to HBO" 
+      style="height:200px;"> <!-- H x 1 -->
+    </a> </div>
+    <div class="centerdisney">
+    <a href="https://www.disneyplus.com/en-gb/home">
+      <img src="Disney+_logo.png" alt="Link to Disney+"
+      style="height:200px;"> <!-- H x 1,77 -->
+    </a> </div>
+    <div class="centertv2">
+      <a href="https://play.tv2.dk/">
+        <img src="TV2_logo.png" alt="Link to TV2play"
+        style="height:200px;"> <!-- H x 1,77 -->
+      </a> </div>
+  </div>
+
+</body>
+</html>
+
+<!--826x563
+    position:absolute; top:400px; left:  0px; 
+  -->
