@@ -8,6 +8,8 @@
     </title> 
     <style>
     :root{
+      --padding: 6.24%;
+      --paddingflix: 9.9%;
       --duration: 5s;
 
       --netflixY: calc(50% - 37.5%); 
@@ -30,7 +32,7 @@
           padding: 0;
           display: flex;
           margin: 0 auto;
-          height: auto;
+          height: 100%;
           max-width: 100%;
         }
 
@@ -44,6 +46,7 @@
         }
 
         .netflix {
+          padding-left: var(--paddingflix); padding-right: var(--paddingflix);
           height:25%;
           margin: 0;
           position: absolute;
@@ -56,6 +59,7 @@
         }
 
         .hbo {
+          padding-left: var(--padding); padding-right: var(--padding);
           height:25%;
           margin: 0;
           position: absolute;
@@ -80,6 +84,7 @@
         }
 
         .tv2 {
+          padding-left: var(--padding); padding-right: var(--padding);
           height:25%;
           margin: 0;
           position: absolute;
