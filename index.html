@@ -8,8 +8,6 @@
     </title> 
     <style>
     :root{
-      --padding: 6.24%;
-      --paddingflix: 9.9%;
       --duration: 5s;
 
       --netflixY: calc(50% - 37.5%); 
@@ -49,8 +47,8 @@
           height:200px;
           margin: 0;
           position: absolute;
-          top: calc(50% - 37.5%);
-          left: calc(50% - 12.5%);
+          top: var(--netflixY);
+          left: var(--netflixX);
           animation-name: netflix_pos;
           animation-duration: var(--duration);
           animation-timing-function: linear;
@@ -61,8 +59,8 @@
           height:200px;
           margin: 0;
           position: absolute;
-          top: calc(50% - 12.5%);
-          left: calc(50% - 37.5%);
+          top: var(--hboY);
+          left: var(--hboX);
           animation-name: hbo_pos;
           animation-duration: var(--duration);
           animation-timing-function: linear;
@@ -73,8 +71,8 @@
           height:200px;
           margin: 0;
           position: absolute;
-          top: calc(50% - 12.5%);
-          left: calc(50% + 12.5%);
+          top: var(--disneyY);
+          left: var(--disneyX);
           animation-name: disney_pos;
           animation-duration: var(--duration);
           animation-timing-function: linear;
@@ -85,8 +83,8 @@
           height:200px;
           margin: 0;
           position: absolute;
-          top: calc(50% + 12.5%);
-          left: calc(50% - 12.5%);
+          top: var(--tv2Y);
+          left: var(--tv2X);
           animation-name: tv2_pos;
           animation-duration: var(--duration);
           animation-timing-function: linear;
