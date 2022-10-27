@@ -10,18 +10,11 @@
     :root{
       --padding: 6.24%;
       --paddingflix: 9.9%;
-      --duration: 12s;
+      --duration: 15s;
+      --quantity: 5;
 
       --centerY: calc(50% - 12.5%);
       --centerX: calc(50% - 12.5%);
-      --netflixY: calc(50% - 37.5%); 
-      --netflixX: calc(50% - 12.5%);
-      --disneyY: calc(50% - 12.5%);
-      --disneyX: calc(50% + 12.5%);
-      --tv2Y: calc(50% + 12.5%); 
-      --tv2X: calc(50% - 12.5%);
-      --hboY: calc(50% - 12.5%); 
-      --hboX: calc(50% - 37.5%);
     }
     
         body {
@@ -55,7 +48,7 @@
           top: var(--centerY);
           left: var(--centerX);
           animation-name: rotation;
-          animation-delay: calc(calc(var(--duration)*3)/-4);
+          animation-delay: calc(calc(var(--duration)*-0)/var(--quantity));
           animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
@@ -69,7 +62,7 @@
           top: var(--centerY);
           left: var(--centerX);
           animation-name: rotation;
-          animation-delay: calc(calc(var(--duration)*0)/-4);
+          animation-delay: calc(calc(var(--duration)*-1)/var(--quantity));
           animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
@@ -82,7 +75,7 @@
           top: var(--centerY);
           left: var(--centerX);
           animation-name: rotation;
-          animation-delay: calc(calc(var(--duration)*2)/-4);
+          animation-delay: calc(calc(var(--duration)*-2)/var(--quantity));
           animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
@@ -96,15 +89,29 @@
           top: var(--centerY);
           left: var(--centerX);
           animation-name: rotation;
-          animation-delay: calc(calc(var(--duration)*1)/-4);
+          animation-delay: calc(calc(var(--duration)*-3)/var(--quantity));
+          animation-duration: var(--duration);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; 
+        }
+
+        .DR {
+          padding-left: var(--padding); padding-right: var(--padding);
+          height:25%;
+          margin: 0;
+          position: absolute;
+          top: var(--centerY);
+          left: var(--centerX);
+          animation-name: rotation;
+          animation-delay: calc(calc(var(--duration)*-4)/var(--quantity));
           animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
         }
 
         @keyframes rotation {
-          from { 	transform: rotate(0deg) translateX(60%) rotate(0deg); }
-	        to   {  transform: rotate(360deg) translateX(60%) rotate(-360deg); }
+          from { 	transform: rotate(0deg) translateX(70%) rotate(0deg); }
+	        to   {  transform: rotate(360deg) translateX(70%) rotate(-360deg); }
         }
 
     </style>   
@@ -130,6 +137,11 @@
     <div class="tv2">
         <a href="https://play.tv2.dk/">
           <img src="TV2_logo.png" alt="Link to TV2play"> <!-- H x 1 -->
+    </a> </div>
+
+    <div class="DR">
+      <a href="https://www.dr.dk/drtv/">
+        <img src="DR_logo.png" alt="Link to DR Live"> <!-- H x 1 -->
     </a> </div>
 
     <div class="hbo">
