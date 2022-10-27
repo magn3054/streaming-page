@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>
+        <meta charset="UTF-8"> 
+        <meta name="description" content="This field contains information about your page. It is usually around two sentences long.">. 
+        <meta name="author" content="Magnus D.C.">
+    </title> 
+    <style>
+    :root{
+      --padding: 6.24%;
+      --paddingflix: 9.9%;
+      --duration: 5s;
+
+      --netflixY: calc(50% - 37.5%); 
+      --netflixX: calc(50% - 12.5%);
+      --disneyY: calc(50% - 12.5%);
+      --disneyX: calc(50% + 12.5%);
+      --tv2Y: calc(50% + 12.5%); 
+      --tv2X: calc(50% - 12.5%);
+      --hboY: calc(50% - 12.5%); 
+      --hboX: calc(50% - 37.5%);
+    }
+    
+        body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        } 
+
+        img {
+          padding: 0;
+          display: flex;
+          margin: 0 auto;
+          height: auto;
+          max-width: 100%;
+        }
+
+        .center {
+          top: 0%;
+          left: 0%;
+          margin: 0;
+          position: fixed;
+          width: 100%;
+          height: 100%
+        }
+
+        .netflix {
+          height:200px;
+          margin: 0;
+          position: absolute;
+          top: calc(50% - 37.5%);
+          left: calc(50% - 12.5%);
+          animation-name: netflix_pos;
+          animation-duration: var(--duration);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; 
+        }
+
+        .hbo {
+          height:200px;
+          margin: 0;
+          position: absolute;
+          top: calc(50% - 12.5%);
+          left: calc(50% - 37.5%);
+          animation-name: hbo_pos;
+          animation-duration: var(--duration);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; 
+        }
+
+        .disney {
+          height:200px;
+          margin: 0;
+          position: absolute;
+          top: calc(50% - 12.5%);
+          left: calc(50% + 12.5%);
+          animation-name: disney_pos;
+          animation-duration: var(--duration);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; 
+        }
+
+        .tv2 {
+          height:200px;
+          margin: 0;
+          position: absolute;
+          top: calc(50% + 12.5%);
+          left: calc(50% - 12.5%);
+          animation-name: tv2_pos;
+          animation-duration: var(--duration);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite; 
+        }
+
+        @keyframes netflix_pos {
+          0%   {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
+          25%  {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
+          50%  {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
+          75%  {top: var(--hboY); left: var(--hboX);}         /*hbo*/
+          100% {top: var(--netflixY); left: var(--netflixX);} /*=0%*/
+        }
+        @keyframes disney_pos {
+          75%  {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
+          0%   {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
+          25%  {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
+          50%  {top: var(--hboY); left: var(--hboX);}         /*hbo*/
+          100% {top: var(--disneyY); left: var(--disneyX);}   /*=0%*/
+        }
+        @keyframes tv2_pos {
+          50%  {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
+          75%  {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
+          0%   {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
+          25%  {top: var(--hboY); left: var(--hboX);}         /*hbo*/
+          100% {top: var(--tv2Y); left: var(--tv2X);}         /*=0%*/
+        }
+        @keyframes hbo_pos {
+          25%  {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
+          50%  {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
+          75%  {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
+          0%   {top: var(--hboY); left: var(--hboX);}         /*hbo*/
+          100% {top: var(--hboY); left: var(--hboX);}         /*=0%*/
+        }
+
+    </style>   
+</head>
+
+
+<body> <!--— This is where the content of the page goes.-->
+  
+  <div class="center">
+    <img src="zurf.JPG">
+  </div>
+
+    <div class="netflix">
+    <a href="https://www.netflix.com/browse">                
+        <img src="Netflix_logo.png" alt="Link to Netflix"> <!-- H x 0,55 -->
+      </a> </div>
+
+    <div class="disney">
+      <a href="https://www.disneyplus.com/en-gb/home">
+        <img src="Disney+_logo.png" alt="Link to Disney+"> <!-- H x 1,77 -->
+      </a> </div>
+
+    <div class="tv2">
+        <a href="https://play.tv2.dk/">
+          <img src="TV2_logo.png" alt="Link to TV2play"> <!-- H x 1 -->
+    </a> </div>
+
+    <div class="hbo">
+    <a href="https://play.hbomax.com/page/urn:hbo:page:home">
+      <img src="HBO_logo.png" alt="Link to HBO"> <!-- H x 1 -->
+    </a> </div>
+
+
+</body>
+</html>
+
