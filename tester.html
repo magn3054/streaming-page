@@ -8,9 +8,20 @@
     </title> 
     <style>
     :root{
-      --topline: 30%;
-      --botline: 70%;
-      --padding: 76.55px;
+      --padding: 6.24%;
+      --paddingflix: 9.9%;
+      --duration: 12s;
+
+      --centerY: calc(50% - 12.5%);
+      --centerX: calc(50% - 12.5%);
+      --netflixY: calc(50% - 37.5%); 
+      --netflixX: calc(50% - 12.5%);
+      --disneyY: calc(50% - 12.5%);
+      --disneyX: calc(50% + 12.5%);
+      --tv2Y: calc(50% + 12.5%); 
+      --tv2X: calc(50% - 12.5%);
+      --hboY: calc(50% - 12.5%); 
+      --hboX: calc(50% - 37.5%);
     }
     
         body {
@@ -23,99 +34,77 @@
           padding: 0;
           display: flex;
           margin: 0 auto;
-          height: auto;
+          height: 100%;
           max-width: 100%;
         }
-        
+
         .center {
+          top: 0%;
+          left: 0%;
           margin: 0;
           position: fixed;
           width: 100%;
-          height: 100%
+          height: auto
         }
 
         .netflix {
-            background-color: red;
-            padding-left: 121.5px; padding-right: 121.5px;
-          height:200px;
+          padding-left: var(--paddingflix); padding-right: var(--paddingflix);
+          height:25%;
           margin: 0;
           position: absolute;
-          top: 50%;
-          left: 50%;
-          animation-name: netflix_pos;
-          animation-duration: 5s;
+          top: var(--centerY);
+          left: var(--centerX);
+          animation-name: rotation;
+          animation-delay: calc(calc(var(--duration)*3)/-4);
+          animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
         }
 
         .hbo {
-            background-color: red;
-            padding-left: var(--padding); padding-right: var(--padding);
-          height:200px;
+          padding-left: var(--padding); padding-right: var(--padding);
+          height:25%;
           margin: 0;
           position: absolute;
-          top: var(--topline);
-          left: 50%;
-          animation-name: hbo_pos;
-          animation-duration: 5s;
+          top: var(--centerY);
+          left: var(--centerX);
+          animation-name: rotation;
+          animation-delay: calc(calc(var(--duration)*0)/-4);
+          animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
         }
 
         .disney {
-            background-color: red;
-          height:200px;
+          height:25%;
           margin: 0;
           position: absolute;
-          top: 50%;
-          left: 68%;
-          animation-name: disney_pos;
-          animation-duration: 5s;
+          top: var(--centerY);
+          left: var(--centerX);
+          animation-name: rotation;
+          animation-delay: calc(calc(var(--duration)*2)/-4);
+          animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
         }
 
         .tv2 {
-            background-color: red;
-            padding-left: var(--padding); padding-right: var(--padding);
-          height:200px;
+          padding-left: var(--padding); padding-right: var(--padding);
+          height:25%;
           margin: 0;
           position: absolute;
-          top: var(--botline);
-          left: 50%;
-          animation-name: tv2_pos;
-          animation-duration: 5s;
+          top: var(--centerY);
+          left: var(--centerX);
+          animation-name: rotation;
+          animation-delay: calc(calc(var(--duration)*1)/-4);
+          animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
         }
 
-        @keyframes hbo_pos {
-          0% {left:50vw; top:30vh;} /* hbo pos - left:50%; top:30%;*/
-          25%  {left:68vw; top:50vh;} /* dis pos - left:68%; top:50%; */
-          50%  {left:50vw; top:70vh;} /* tv2 pos - left:50%; top:70%; */
-          75%  {left:35vw; top:50vh;} /* net pos - left:35%; top:50%; */
-          100% {left:50vw; top:30vh;} /* hbo pos */
-        }
-        @keyframes disney_pos {
-          0%   {left:68%; top:50%;} /* dis pos */
-          25%  {left:50%; top:70%;} /* tv2 pos */
-          50%  {left:35%; top:50%;} /* net pos */
-          75%  {left:50%; top:30%;} /* hbo pos */
-          100% {left:68%; top:50%;} /* dis pos */
-        }
-        @keyframes tv2_pos {
-          0%   {left:50%; top:70%;} /* tv2 pos */
-          25%  {left:35%; top:50%;} /* net pos */
-          50%  {left:50%; top:30%;} /* hbo pos */
-          75%  {left:68%; top:50%;} /* dis pos */
-          100% {left:50%; top:70%;} /* tv2 pos */
-        }
-        @keyframes netflix_pos {
-          0%   {left:35%; top:50%;} /* net pos */
-          25%  {left:50%; top:30%;} /* hbo pos */
-          50%  {left:68%; top:50%;} /* dis pos */
-          75%  {left:50%; top:70%;} /* tv2 pos */
-          100% {left:35%; top:50%;} /* net pos */
+        @keyframes rotation {
+          from { 	transform: rotate(0deg) translateX(60%) rotate(0deg); }
+	        to   {  transform: rotate(360deg) translateX(60%) rotate(-360deg); }
         }
 
     </style>   
@@ -125,24 +114,29 @@
 <body> <!--— This is where the content of the page goes.-->
   
   <div class="center">
-    <img src="zurf.JPG">
+    <img src="zurf.JPG" alt="background image">
   </div>
+
     <div class="netflix">
     <a href="https://www.netflix.com/browse">                
         <img src="Netflix_logo.png" alt="Link to Netflix"> <!-- H x 0,55 -->
       </a> </div>
+
+    <div class="disney">
+      <a href="https://www.disneyplus.com/en-gb/home">
+        <img src="Disney+_logo.png" alt="Link to Disney+"> <!-- H x 1,77 -->
+      </a> </div>
+
+    <div class="tv2">
+        <a href="https://play.tv2.dk/">
+          <img src="TV2_logo.png" alt="Link to TV2play"> <!-- H x 1 -->
+    </a> </div>
+
     <div class="hbo">
     <a href="https://play.hbomax.com/page/urn:hbo:page:home">
       <img src="HBO_logo.png" alt="Link to HBO"> <!-- H x 1 -->
     </a> </div>
-    <div class="disney">
-    <a href="https://www.disneyplus.com/en-gb/home">
-      <img src="Disney+_logo.png" alt="Link to Disney+"> <!-- H x 1,77 -->
-    </a> </div>
-    <div class="tv2">
-      <a href="https://play.tv2.dk/">
-        <img src="TV2_logo.png" alt="Link to TV2play"> <!-- H x 1 -->
-      </a> </div>
+
 
 </body>
 </html>

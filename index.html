@@ -10,8 +10,10 @@
     :root{
       --padding: 6.24%;
       --paddingflix: 9.9%;
-      --duration: 5s;
+      --duration: 12s;
 
+      --centerY: calc(50% - 12.5%);
+      --centerX: calc(50% - 12.5%);
       --netflixY: calc(50% - 37.5%); 
       --netflixX: calc(50% - 12.5%);
       --disneyY: calc(50% - 12.5%);
@@ -50,9 +52,10 @@
           height:25%;
           margin: 0;
           position: absolute;
-          top: var(--netflixY);
-          left: var(--netflixX);
-          animation-name: netflix_pos;
+          top: var(--centerY);
+          left: var(--centerX);
+          animation-name: rotation;
+          animation-delay: calc(calc(var(--duration)*3)/-4);
           animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
@@ -63,9 +66,10 @@
           height:25%;
           margin: 0;
           position: absolute;
-          top: var(--hboY);
-          left: var(--hboX);
-          animation-name: hbo_pos;
+          top: var(--centerY);
+          left: var(--centerX);
+          animation-name: rotation;
+          animation-delay: calc(calc(var(--duration)*0)/-4);
           animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
@@ -75,9 +79,10 @@
           height:25%;
           margin: 0;
           position: absolute;
-          top: var(--disneyY);
-          left: var(--disneyX);
-          animation-name: disney_pos;
+          top: var(--centerY);
+          left: var(--centerX);
+          animation-name: rotation;
+          animation-delay: calc(calc(var(--duration)*2)/-4);
           animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
@@ -88,41 +93,18 @@
           height:25%;
           margin: 0;
           position: absolute;
-          top: var(--tv2Y);
-          left: var(--tv2X);
-          animation-name: tv2_pos;
+          top: var(--centerY);
+          left: var(--centerX);
+          animation-name: rotation;
+          animation-delay: calc(calc(var(--duration)*1)/-4);
           animation-duration: var(--duration);
           animation-timing-function: linear;
           animation-iteration-count: infinite; 
         }
 
-        @keyframes netflix_pos {
-          0%   {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
-          25%  {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
-          50%  {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
-          75%  {top: var(--hboY); left: var(--hboX);}         /*hbo*/
-          100% {top: var(--netflixY); left: var(--netflixX);} /*=0%*/
-        }
-        @keyframes disney_pos {
-          75%  {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
-          0%   {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
-          25%  {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
-          50%  {top: var(--hboY); left: var(--hboX);}         /*hbo*/
-          100% {top: var(--disneyY); left: var(--disneyX);}   /*=0%*/
-        }
-        @keyframes tv2_pos {
-          50%  {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
-          75%  {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
-          0%   {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
-          25%  {top: var(--hboY); left: var(--hboX);}         /*hbo*/
-          100% {top: var(--tv2Y); left: var(--tv2X);}         /*=0%*/
-        }
-        @keyframes hbo_pos {
-          25%  {top: var(--netflixY); left: var(--netflixX);} /*netflix*/
-          50%  {top: var(--disneyY); left: var(--disneyX);}   /*disney*/
-          75%  {top: var(--tv2Y); left: var(--tv2X);}         /*tv2*/
-          0%   {top: var(--hboY); left: var(--hboX);}         /*hbo*/
-          100% {top: var(--hboY); left: var(--hboX);}         /*=0%*/
+        @keyframes rotation {
+          from { 	transform: rotate(0deg) translateX(60%) rotate(0deg); }
+	        to   {  transform: rotate(360deg) translateX(60%) rotate(-360deg); }
         }
 
     </style>   

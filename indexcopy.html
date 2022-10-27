@@ -32,7 +32,7 @@
           padding: 0;
           display: flex;
           margin: 0 auto;
-          height: auto;
+          height: 100%;
           max-width: 100%;
         }
 
@@ -42,15 +42,16 @@
           margin: 0;
           position: fixed;
           width: 100%;
-          height: 100%
+          height: auto
         }
 
         .netflix {
-          height:200px;
+          padding-left: var(--paddingflix); padding-right: var(--paddingflix);
+          height:25%;
           margin: 0;
           position: absolute;
-          top: calc(50% - 37.5%);
-          left: calc(50% - 12.5%);
+          top: var(--netflixY);
+          left: var(--netflixX);
           animation-name: netflix_pos;
           animation-duration: var(--duration);
           animation-timing-function: linear;
@@ -58,11 +59,12 @@
         }
 
         .hbo {
-          height:200px;
+          padding-left: var(--padding); padding-right: var(--padding);
+          height:25%;
           margin: 0;
           position: absolute;
-          top: calc(50% - 12.5%);
-          left: calc(50% - 37.5%);
+          top: var(--hboY);
+          left: var(--hboX);
           animation-name: hbo_pos;
           animation-duration: var(--duration);
           animation-timing-function: linear;
@@ -70,11 +72,11 @@
         }
 
         .disney {
-          height:200px;
+          height:25%;
           margin: 0;
           position: absolute;
-          top: calc(50% - 12.5%);
-          left: calc(50% + 12.5%);
+          top: var(--disneyY);
+          left: var(--disneyX);
           animation-name: disney_pos;
           animation-duration: var(--duration);
           animation-timing-function: linear;
@@ -82,11 +84,12 @@
         }
 
         .tv2 {
-          height:200px;
+          padding-left: var(--padding); padding-right: var(--padding);
+          height:25%;
           margin: 0;
           position: absolute;
-          top: calc(50% + 12.5%);
-          left: calc(50% - 12.5%);
+          top: var(--tv2Y);
+          left: var(--tv2X);
           animation-name: tv2_pos;
           animation-duration: var(--duration);
           animation-timing-function: linear;
@@ -129,7 +132,7 @@
 <body> <!--— This is where the content of the page goes.-->
   
   <div class="center">
-    <img src="zurf.JPG">
+    <img src="zurf.JPG" alt="background image">
   </div>
 
     <div class="netflix">
