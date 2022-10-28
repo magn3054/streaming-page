@@ -149,6 +149,20 @@
       <img src="HBO_logo.png" alt="Link to HBO"> <!-- H x 1 -->
     </a> </div>
 
+  <script>
+    const myTimeout = setTimeout(myGreeting, 2000);
+
+    function myGreeting() {
+      window.onload = function() {
+        if(!window.location.hash) {
+          window.location = window.location + '#loaded'; 
+          window.location.reload();
+      }
+    }
+    }
+
+    
+  </script>
 
 </body>
 </html>
