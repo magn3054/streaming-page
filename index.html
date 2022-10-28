@@ -13,8 +13,9 @@
       --duration: 15s;
       --quantity: 5;
 
-      --centerY: calc(50% - 12.5%);
-      --centerX: calc(50% - 12.5%);
+      --centerY: calc(50vh - 12.5vh);
+      --centerX: calc(50vw - 12.5vw);
+      --logoheight: 25vh
     }
     
         body {
@@ -42,7 +43,7 @@
 
         .netflix {
           padding-left: var(--paddingflix); padding-right: var(--paddingflix);
-          height:25%;
+          height: var(--logoheight);
           margin: 0;
           position: absolute;
           top: var(--centerY);
@@ -56,7 +57,7 @@
 
         .hbo {
           padding-left: var(--padding); padding-right: var(--padding);
-          height:25%;
+          height: var(--logoheight);
           margin: 0;
           position: absolute;
           top: var(--centerY);
@@ -69,7 +70,7 @@
         }
 
         .disney {
-          height:25%;
+          height: var(--logoheight);
           margin: 0;
           position: absolute;
           top: var(--centerY);
@@ -83,7 +84,7 @@
 
         .tv2 {
           padding-left: var(--padding); padding-right: var(--padding);
-          height:25%;
+          height: var(--logoheight);
           margin: 0;
           position: absolute;
           top: var(--centerY);
@@ -97,7 +98,7 @@
 
         .DR {
           padding-left: var(--padding); padding-right: var(--padding);
-          height:25%;
+          height: var(--logoheight);
           margin: 0;
           position: absolute;
           top: var(--centerY);
@@ -149,20 +150,6 @@
       <img src="HBO_logo.png" alt="Link to HBO"> <!-- H x 1 -->
     </a> </div>
 
-  <script>
-    const myTimeout = setTimeout(myGreeting, 2000);
-
-    function myGreeting() {
-      window.onload = function() {
-        if(!window.location.hash) {
-          window.location = window.location + '#loaded'; 
-          window.location.reload();
-      }
-    }
-    }
-
-    
-  </script>
 
 </body>
 </html>
