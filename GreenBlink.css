@@ -1,0 +1,81 @@
+:root{
+  --bg: rgb(0, 0, 0); 
+}
+
+.container {
+  position: relative;
+  height: 150px;
+  width: 150px; 
+  left: 50px;
+  top: 150px;
+}
+
+body {
+  background-color: var(--bg);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+} 
+.center {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.circ_outer {
+  height: 65px;
+  width: 65px;
+  background-color: rgb(72, 255, 0);
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 42.5px;
+  box-shadow: 0px 0px 30px 10px rgba(72, 255, 0, 0.5); 
+  animation:  0.4s alternate linear; 
+}
+
+.circ_mid {
+  height: 55px;
+  width: 55px;
+  background-color: var(--bg);
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 47.5px;
+  box-shadow: 0px 0px 8px 4px rgba(72, 255, 0, 0.5) inset;
+  animation: 0.4s alternate linear;     
+}
+
+.mouth {
+  transform: translate(15px, 80px);
+  fill:rgb(57, 202, 0)
+}
+
+
+@keyframes outer_eye {
+  from {
+      
+  }
+  50% {
+    height:10px; 
+    width:70px;
+    top: 2.5px;
+    left: 42.5px;
+    transform: translate(-40px, 30px);
+  }
+}
+    
+@keyframes inner_eye {
+  from{
+
+  }    
+  50% {
+      height:5px; 
+      width:60px;
+      top: 2.5px;
+      left: 42.5px;
+      transform: translate(-35px, 32px); 
+      box-shadow: 0px 0px 30px 10px rgb(9, 24, 3) inset; 
+  }
+}
