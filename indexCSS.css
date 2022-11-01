@@ -1,0 +1,107 @@
+:root{
+    --padding: 6.24%;
+    --paddingflix: 9.9%;
+    --duration: 15s;
+    --quantity: 5;
+
+    --centerY: calc(50vh - 12.5vh);
+    --centerX: calc(50vw - 12.5vw);
+    --logoheight: 25vh
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
+img {
+    padding: 0;
+    display: flex;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 100%;
+}
+
+.center {
+    top: 0%;
+    left: 0%;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: auto
+}
+
+.netflix {
+    padding-left: var(--paddingflix); padding-right: var(--paddingflix);
+    height: var(--logoheight);
+    margin: 0;
+    position: absolute;
+    top: var(--centerY);
+    left: var(--centerX);
+    animation-name: rotation;
+    animation-delay: calc(calc(var(--duration)*-0)/var(--quantity));
+    animation-duration: var(--duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+.hbo {
+    padding-left: var(--padding); padding-right: var(--padding);
+    height: var(--logoheight);
+    margin: 0;
+    position: absolute;
+    top: var(--centerY);
+    left: var(--centerX);
+    animation-name: rotation;
+    animation-delay: calc(calc(var(--duration)*-1)/var(--quantity));
+    animation-duration: var(--duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+.disney {
+    height: var(--logoheight);
+    margin: 0;
+    position: absolute;
+    top: var(--centerY);
+    left: var(--centerX);
+    animation-name: rotation;
+    animation-delay: calc(calc(var(--duration)*-2)/var(--quantity));
+    animation-duration: var(--duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+.tv2 {
+    padding-left: var(--padding); padding-right: var(--padding);
+    height: var(--logoheight);
+    margin: 0;
+    position: absolute;
+    top: var(--centerY);
+    left: var(--centerX);
+    animation-name: rotation;
+    animation-delay: calc(calc(var(--duration)*-3)/var(--quantity));
+    animation-duration: var(--duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+    }
+
+.DR {
+    padding-left: var(--padding); padding-right: var(--padding);
+    height: var(--logoheight);
+    margin: 0;
+    position: absolute;
+    top: var(--centerY);
+    left: var(--centerX);
+    animation-name: rotation;
+    animation-delay: calc(calc(var(--duration)*-4)/var(--quantity));
+    animation-duration: var(--duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes rotation {
+    from { 	transform: rotate(0deg) translateX(18vw) rotate(0deg); }
+        to   {  transform: rotate(360deg) translateX(18vw) rotate(-360deg); }
+}
