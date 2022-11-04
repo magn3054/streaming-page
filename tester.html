@@ -7,105 +7,40 @@
         <meta name="author" content="Magnus D.C.">
     </title> 
     <style>
-    :root{
-      --padding: 6.24%;
-      --paddingflix: 9.9%;
-      --duration: 12s;
+   
 
-      --centerY: calc(50% - 12.5%);
-      --centerX: calc(50% - 12.5%);
-      --netflixY: calc(50% - 37.5%); 
-      --netflixX: calc(50% - 12.5%);
-      --disneyY: calc(50% - 12.5%);
-      --disneyX: calc(50% + 12.5%);
-      --tv2Y: calc(50% + 12.5%); 
-      --tv2X: calc(50% - 12.5%);
-      --hboY: calc(50% - 12.5%); 
-      --hboX: calc(50% - 37.5%);
-    }
-    
-        body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        } 
-
-        img {
-          padding: 0;
-          display: flex;
-          margin: 0 auto;
-          height: 100%;
-          max-width: 100%;
-        }
-
-        .center {
-          top: 0%;
-          left: 0%;
-          margin: 0;
-          position: fixed;
-          width: 100%;
-          height: auto
-        }
-
-        .netflix {
-          padding-left: var(--paddingflix); padding-right: var(--paddingflix);
-          height:25%;
-          margin: 0;
-          position: absolute;
-          top: var(--centerY);
-          left: var(--centerX);
-          animation-name: rotation;
-          animation-delay: calc(calc(var(--duration)*3)/-4);
-          animation-duration: var(--duration);
-          animation-timing-function: linear;
-          animation-iteration-count: infinite; 
-        }
-
-        .hbo {
-          padding-left: var(--padding); padding-right: var(--padding);
-          height:25%;
-          margin: 0;
-          position: absolute;
-          top: var(--centerY);
-          left: var(--centerX);
-          animation-name: rotation;
-          animation-delay: calc(calc(var(--duration)*0)/-4);
-          animation-duration: var(--duration);
-          animation-timing-function: linear;
-          animation-iteration-count: infinite; 
-        }
-
-        .disney {
-          height:25%;
-          margin: 0;
-          position: absolute;
-          top: var(--centerY);
-          left: var(--centerX);
-          animation-name: rotation;
-          animation-delay: calc(calc(var(--duration)*2)/-4);
-          animation-duration: var(--duration);
-          animation-timing-function: linear;
-          animation-iteration-count: infinite; 
-        }
-
-        .tv2 {
-          padding-left: var(--padding); padding-right: var(--padding);
-          height:25%;
-          margin: 0;
-          position: absolute;
-          top: var(--centerY);
-          left: var(--centerX);
-          animation-name: rotation;
-          animation-delay: calc(calc(var(--duration)*1)/-4);
-          animation-duration: var(--duration);
-          animation-timing-function: linear;
-          animation-iteration-count: infinite; 
-        }
-
-        @keyframes rotation {
-          from { 	transform: rotate(0deg) translateX(60%) rotate(0deg); }
-	        to   {  transform: rotate(360deg) translateX(60%) rotate(-360deg); }
-        }
+@keyframes slide {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: 244px;
+    top: 100px;
+  }
+  100% {
+    left: 488px;
+    top: 0;
+  }
+}
+.container {
+  background: blue;
+  height: 150px;
+  width: 150;
+  position: relative;
+}
+.outer_eye {
+    background: red;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+.stage:hover .ball {
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: .5s;
+}
 
     </style>   
 </head>
@@ -113,30 +48,9 @@
 
 <body> <!--— This is where the content of the page goes.-->
   
-  <div class="center">
-    <img src="zurf.JPG" alt="background image">
+  <div class="container">
+    <figure class="outer_eye"></figure>
   </div>
-
-    <div class="netflix">
-    <a href="https://www.netflix.com/browse">                
-        <img src="Netflix_logo.png" alt="Link to Netflix"> <!-- H x 0,55 -->
-      </a> </div>
-
-    <div class="disney">
-      <a href="https://www.disneyplus.com/en-gb/home">
-        <img src="Disney+_logo.png" alt="Link to Disney+"> <!-- H x 1,77 -->
-      </a> </div>
-
-    <div class="tv2">
-        <a href="https://play.tv2.dk/">
-          <img src="TV2_logo.png" alt="Link to TV2play"> <!-- H x 1 -->
-    </a> </div>
-
-    <div class="hbo">
-    <a href="https://play.hbomax.com/page/urn:hbo:page:home">
-      <img src="HBO_logo.png" alt="Link to HBO"> <!-- H x 1 -->
-    </a> </div>
-
 
 </body>
 </html>
