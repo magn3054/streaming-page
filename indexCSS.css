@@ -1,6 +1,5 @@
 :root{
     --padding: 6.24%;
-    --paddingflix: 9.9%;
     --duration: 15s;
     --quantity: 6;
 
@@ -33,7 +32,7 @@ img {
 }
 
 .netflix {
-    padding-left: var(--paddingflix); padding-right: var(--paddingflix);
+    padding-left: var(--padding); padding-right: var(--padding);
     height: var(--logoheight);
     margin: 0;
     position: absolute;
@@ -44,7 +43,7 @@ img {
     animation-duration: var(--duration);
     animation-timing-function: linear;
     animation-iteration-count: infinite; 
-}
+    }
 
 .hbo {
     padding-left: var(--padding); padding-right: var(--padding);
@@ -61,6 +60,7 @@ img {
 }
 
 .disney {
+    padding-left: var(--padding); padding-right: var(--padding);
     height: var(--logoheight);
     margin: 0;
     position: absolute;
@@ -71,7 +71,7 @@ img {
     animation-duration: var(--duration);
     animation-timing-function: linear;
     animation-iteration-count: infinite; 
-}
+    }
 
 .tv2 {
     padding-left: var(--padding); padding-right: var(--padding);
