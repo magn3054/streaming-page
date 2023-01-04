@@ -2,7 +2,7 @@
     --padding: 6.24%;
     --paddingflix: 9.9%;
     --duration: 15s;
-    --quantity: 5;
+    --quantity: 6;
 
     --centerY: calc(50vh - 12.5vh);
     --centerX: calc(50vw - 12.5vw);
@@ -96,6 +96,20 @@ img {
     left: var(--centerX);
     animation-name: rotation;
     animation-delay: calc(calc(var(--duration)*-4)/var(--quantity));
+    animation-duration: var(--duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+.prime {
+    padding-left: var(--padding); padding-right: var(--padding);
+    height: var(--logoheight);
+    margin: 0;
+    position: absolute;
+    top: var(--centerY);
+    left: var(--centerX);
+    animation-name: rotation;
+    animation-delay: calc(calc(var(--duration)*-5)/var(--quantity));
     animation-duration: var(--duration);
     animation-timing-function: linear;
     animation-iteration-count: infinite; 
