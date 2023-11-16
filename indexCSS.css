@@ -103,7 +103,7 @@ img {
             transform: translateY(-55vh);
           }
           to {
-            transform: translateY(65vh); 
+            transform: translateY(700px); 
           }
     } 
 
@@ -112,7 +112,7 @@ img {
 
     #windowSize {
         position: absolute;
-        margin-top: 500px;
+        margin-top: 150px;
       font-size: 18px;
       font-family: Arial, sans-serif;
     }
