@@ -123,3 +123,11 @@ img {
     } 
 
 }
+
+
+    #windowSize {
+        position: absolute;
+        margin-top: 500px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }

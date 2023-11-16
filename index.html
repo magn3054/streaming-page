@@ -55,7 +55,27 @@
     <a href="https://www.primevideo.com/">
       <img src="prime.png" alt="Link to Prime video"> <!-- H x 1 -->
     </a> </div>
-    
+
+    <div id="windowSize"></div>
+
+    <!-- Add the script just before the closing </body> tag -->
+    <script>
+      // Function to update window size information
+      function updateWindowSize() {
+        var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  
+        // Display window size information in the div with id "windowSize"
+        document.getElementById('windowSize').innerHTML = 'Window Width: ' + windowWidth + '<br>Window Height: ' + windowHeight;
+      }
+  
+      // Initial call to set the initial window size information
+      updateWindowSize();
+  
+      // Add an event listener to update window size on window resize
+      window.addEventListener('resize', updateWindowSize);
+    </script>
+
 </body>
 </html>
 
