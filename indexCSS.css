@@ -17,27 +17,45 @@ body {
 img {
     padding: 0;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto; 
     height: 100%;
-    max-width: 100%;
+    max-width: 100%; 
 }
 
-.center {
+.background {
     top: 0%;
     left: 0%;
     margin: 0;
     position: fixed;
     width: 100%;
-    height: auto
+    /* height: auto */
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin-left: 10px;
+}
+
+.img2 {
+    padding-left: 6.24%; padding-right: 6.24%;
+    display: flex;
+    position: absolute;
+    top: 37.5vh;
+    left: 37.5vw;
+    margin: 0 auto;
+    height: 25vh;
+    max-width: 100%;
 }
 
 .netflix {
-    padding-left: var(--padding); padding-right: var(--padding);
-    height: var(--logoheight);
-    margin: 0;
-    position: absolute;
-    top: var(--centerY);
-    left: var(--centerX);
+    /* padding-left: var(--padding); padding-right: var(--padding); */
+    /* height: var(--logoheight); */
+    /* margin: 0; */
+    /* position: absolute; */
+    /* top: var(--centerY); */
+    /* left: var(--centerX); */
     animation-name: rotation;
     animation-delay: calc(calc(var(--duration)*-0)/var(--quantity));
     animation-duration: var(--duration);
@@ -46,12 +64,12 @@ img {
     }
 
 .hbo {
-    padding-left: var(--padding); padding-right: var(--padding);
+    /* padding-left: var(--padding); padding-right: var(--padding);
     height: var(--logoheight);
     margin: 0;
     position: absolute;
     top: var(--centerY);
-    left: var(--centerX);
+    left: var(--centerX); */
     animation-name: rotation;
     animation-delay: calc(calc(var(--duration)*-1)/var(--quantity));
     animation-duration: var(--duration);
@@ -60,12 +78,12 @@ img {
 }
 
 .disney {
-    padding-left: var(--padding); padding-right: var(--padding);
+    /* padding-left: var(--padding); padding-right: var(--padding);
     height: var(--logoheight);
     margin: 0;
     position: absolute;
     top: var(--centerY);
-    left: var(--centerX);
+    left: var(--centerX); */
     animation-name: rotation;
     animation-delay: calc(calc(var(--duration)*-2)/var(--quantity));
     animation-duration: var(--duration);
@@ -74,12 +92,12 @@ img {
     }
 
 .tv2 {
-    padding-left: var(--padding); padding-right: var(--padding);
+    /* padding-left: var(--padding); padding-right: var(--padding);
     height: var(--logoheight);
     margin: 0;
     position: absolute;
     top: var(--centerY);
-    left: var(--centerX);
+    left: var(--centerX); */
     animation-name: rotation;
     animation-delay: calc(calc(var(--duration)*-3)/var(--quantity));
     animation-duration: var(--duration);
@@ -88,12 +106,12 @@ img {
     }
 
 .viaplay {
-    padding-left: var(--padding); padding-right: var(--padding);
+    /* padding-left: var(--padding); padding-right: var(--padding);
     height: var(--logoheight);
     margin: 0;
     position: absolute;
     top: var(--centerY);
-    left: var(--centerX);
+    left: var(--centerX); */
     animation-name: rotation;
     animation-delay: calc(calc(var(--duration)*-4)/var(--quantity));
     animation-duration: var(--duration);
@@ -102,12 +120,12 @@ img {
 }
 
 .prime {
-    padding-left: var(--padding); padding-right: var(--padding);
+    /* padding-left: var(--padding); padding-right: var(--padding);
     height: var(--logoheight);
     margin: 0;
     position: absolute;
     top: var(--centerY);
-    left: var(--centerX);
+    left: var(--centerX); */
     animation-name: rotation;
     animation-delay: calc(calc(var(--duration)*-5)/var(--quantity));
     animation-duration: var(--duration);
