@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background: url('zurf.JPG') center/cover no-repeat fixed;
 } 
 
 img {
@@ -21,15 +22,6 @@ img {
     margin: 0 auto; 
     height: 100%;
     max-width: 100%; 
-}
-
-.background {
-    top: 0%;
-    left: 0%;
-    margin: 0;
-    position: fixed;
-    width: 100%;
-    /* height: auto */
 }
 
 .container {
@@ -87,17 +79,11 @@ img {
       }
 } 
 
+
+
 @media (max-width: 950px) {
     .img2 {
         height: 20vh;
-    }
-
-    .background{
-        width: 0;
-    }
-
-    body {
-        background: rgb(0, 134, 168);
     }
 }
 
@@ -105,7 +91,6 @@ img {
     .img2 {
         height: 15vh;
     }
-
 }
 
 @media (max-width: 550px) {
@@ -115,10 +100,10 @@ img {
 
     @keyframes slide {
         from {
-            transform: translateY(-55vh); /* Start from the left side, outside the viewport */
+            transform: translateY(-55vh);
           }
           to {
-            transform: translateY(65vh); /* Move to the original position (0) */
+            transform: translateY(65vh); 
           }
     } 
 
