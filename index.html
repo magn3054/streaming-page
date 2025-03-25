@@ -2,29 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Streaming Platforms</title>
-  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="stylesheet" href="css/index.css" />
   <script src="js/show-tjeneste.js" defer></script>
 </head>
 
 <body>
-  <h1>Select Your Streaming Platforms</h1>
-  <div class="dropdown">
-    <button>Select Platforms</button>
-    <div id="dropdown-menu" class="dropdown-content">
-      <label><input type="checkbox" class="platform-checkbox" value="netflix"/>Netflix</label>
-      <label><input type="checkbox" class="platform-checkbox" value="disney"/>Disney+</label>
-      <label><input type="checkbox" class="platform-checkbox" value="hbo"/>HBO</label>
-      <label><input type="checkbox" class="platform-checkbox" value="prime"/>Prime</label>
-      <label><input type="checkbox" class="platform-checkbox" value="viaplay"/>Viaplay</label>
-      <label><input type="checkbox" class="platform-checkbox" value="tv2"/>TV2 Play</label>
-      <label><input type="checkbox" class="platform-checkbox" value="dr1"/>DR1</label>
+  <header>
+    <div class="dropdown">
+      <button>Vælg tjenester</button>
+      <div id="dropdown-menu" class="dropdown-content">
+        <label><input type="checkbox" class="platform-checkbox" value="netflix" />Netflix</label>
+        <label><input type="checkbox" class="platform-checkbox" value="disney" />Disney+</label>
+        <label><input type="checkbox" class="platform-checkbox" value="hbo" />HBO</label>
+        <label><input type="checkbox" class="platform-checkbox" value="prime" />Prime</label>
+        <label><input type="checkbox" class="platform-checkbox" value="viaplay" />Viaplay</label>
+        <label><input type="checkbox" class="platform-checkbox" value="tv2" />TV2 Play</label>
+        <label><input type="checkbox" class="platform-checkbox" value="dr1" />DR1</label>
+        <label><input type="checkbox" class="checkbox-all" id="select-all" value="all" /><span id="selectAllButton">Vælg alle</span></label>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <div class="logos" id="logos"></div>
+  <main class="logos" id="logos"></main>
 
 </body>
 
