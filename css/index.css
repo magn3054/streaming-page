@@ -111,6 +111,7 @@ main {
 
 .logo-container {
     animation: jump 5s ease-in-out infinite;
+    cursor: pointer;
 }
 
 .logo-container:nth-child(1) {
