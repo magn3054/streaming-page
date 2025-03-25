@@ -1,36 +1,45 @@
-const logos = {
-    netflix: 'img/netflix_logo.png',
-    disney: 'img/disney_logo.png',
-    hbo: 'img/hbo_logo.png',
-    dr: 'img/dr_logo.png',
-    tv2: 'img/tv2_logo.png',
-    viaplay: 'img/viaplay_logo.png',
-    prime: 'img/prime_logo.png',
-};
+document.addEventListener("DOMContentLoaded", function () {
+    const checkboxes = document.querySelectorAll(".platform-checkbox");
+    const logoContainer = document.getElementById("logos");
 
-function saveSelection() {
-    const selectedPlatforms = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
-    localStorage.setItem('selectedPlatforms', JSON.stringify(selectedPlatforms));
-}
+    // Load saved selections from localStorage
+    const savedPlatforms = JSON.parse(localStorage.getItem("selectedPlatforms")) || [];
 
-function loadSelection() {
-    const savedPlatforms = JSON.parse(localStorage.getItem('selectedPlatforms')) || [];
-    savedPlatforms.forEach(platform => {
-        const checkbox = document.querySelector(`input[value="${platform}"]`);
-        if (checkbox) checkbox.checked = true;
+    // Restore checked state from saved selections
+    checkboxes.forEach(checkbox => {
+        if (savedPlatforms.includes(checkbox.value)) {
+            checkbox.checked = true;
+        }
     });
-    displayLogos();
-}
 
-document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-        const logosContainer = document.getElementById('logos');
-        logosContainer.innerHTML = '';
-        document.querySelectorAll('input[type="checkbox"]:checked').forEach(checked => {
-            const img = document.createElement('img');
-            img.src = logos[checked.value];
-            img.alt = checked.value;
-            logosContainer.appendChild(img);
+    // Function to update displayed logos and save selection
+    function updateLogos() {
+        logoContainer.innerHTML = ""; // Clear existing logos
+        let selectedPlatforms = [];
+
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                selectedPlatforms.push(checkbox.value);
+
+                // Create and append the logo image
+                const img = document.createElement("img");
+                img.src = `img/${checkbox.value}.png`; // Path to logo images
+                img.alt = checkbox.value;
+                img.style.width = "100px";
+                img.style.margin = "5px";
+                logoContainer.appendChild(img);
+            }
         });
+
+        // Save to localStorage
+        localStorage.setItem("selectedPlatforms", JSON.stringify(selectedPlatforms));
+    }
+
+    // Add event listeners to checkboxes
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", updateLogos);
     });
+
+    // Initial update to display saved logos on load
+    updateLogos();
 });
