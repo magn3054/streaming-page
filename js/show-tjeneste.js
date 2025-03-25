@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             imgContainer.className = "logo-container";
             logoContainer.appendChild(imgContainer);
             const img = document.createElement("img");
-            img.src = `img/${platform}.png`; // Path to logo images
+            img.src = `img/${platform}.svg`; // Path to logo images
             img.alt = platform;
             img.style.width = `${logoWidth}dvw`;
             imgContainer.appendChild(img);

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: #e50914;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="190.03" y1="256.12" x2="240.04" y2="276.58" gradientTransform="translate(0 502) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b1060f"/>
+      <stop offset=".55" stop-color="#7b010c"/>
+      <stop offset="1" stop-color="#e50914" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="309.82" y1="251.09" x2="258.67" y2="229.49" gradientTransform="translate(0 502) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b1060f"/>
+      <stop offset=".63" stop-color="#7b010c"/>
+      <stop offset="1" stop-color="#b1060f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect y="0" width="500" height="500" rx="75" ry="75"/>
+  <path id="path6055" class="cls-3" d="M153.05,75l1.21,350c25.55-4.92,45.64-4.38,68.31-6.43V75.4l-69.52-.4Z"/>
+  <path id="path678" class="cls-1" d="M276.82,75.6h69.52l.8,348.79-70.72-11.65.4-337.14Z"/>
+  <path id="path362" class="cls-2" d="M153.86,75.8c1.61,4.02,120.55,342.37,120.55,342.37,19.54-.14,45.75,3.05,71.53,6.03L222.17,75.8h-68.31Z"/>
+</svg>
