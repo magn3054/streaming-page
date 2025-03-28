@@ -136,10 +136,10 @@ main {
     animation-delay: -0s;
 }
 
-img {
+main img {
     transition: transform 0.4s;
 }
-img:hover {
+main img:hover {
     transform: scale(1.3);
 }
 

@@ -8,9 +8,44 @@
   <link rel="stylesheet" href="css/index.css" />
   <script src="js/show-tjeneste.js" defer></script>
   <link rel="icon" href="img/icon.svg" type="image/x-icon">
+  <style>
+    .mountain-container {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .mountain-container img {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- <div class="mountain-container">
+    <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="100%"
+      height="auto">
+      <path fill="green" fill-opacity="1"
+        d="M0,53.5l48,8.86c48,9.53,150-.75,246,17.64s186,62.11,282,89.36c96,26.25,192,63.03,288,35.78,96-26.25,192-116.53,288-160.5C1248,0,1344,0,1392,0h48v321H0V53.5Z">
+      </path>
+      <path fill="red" fill-opacity="1"
+        d="M1440,74.8l-48,6.19c-48,6.66-144,18.35-240,31.21-96,12.86-192,24.54-288,24.89-96-.35-192-12.04-288-37.4-96-24.89-192-62.29-288-80.99S96,0,48,0H0v187h1440v-112.2Z">
+      </path>
+      <path fill="white" fill-opacity="1"
+        d="M0,224l48-10.7c48-10.3,144-32.3,240-64,96-32.3,192-74.3,288-85.3s192,11,288,32,192,43,288,26.7c96-15.7,192-69.7,240-96l48-26.7v256H0v-32Z">
+      </path>
+      <path fill="blue" fill-opacity="1"
+        d="M0,0l48,16c48,16,144,48,240,58.7,96,10.3,192,.3,288-10.7s192-21,288-10.7c96,10.7,192,42.7,288,48,96,5.7,192-16.3,240-26.6l48-10.7v64H0V0Z">
+      </path>
+    </svg>
+  </div> -->
+  <div class="mountain-container">
+    <img src="img/mountain4.svg" alt="">
+    <img src="img/mountain3.svg" alt="">
+    <img src="img/mountain2.svg" alt="">
+    <img src="img/mountain1.svg" alt="">
+  </div>
   <header>
     <div class="dropdown">
       <button>Vælg tjenester</button>
@@ -22,7 +57,8 @@
         <label><input type="checkbox" class="platform-checkbox" value="viaplay" />Viaplay</label>
         <label><input type="checkbox" class="platform-checkbox" value="tv2" />TV2 Play</label>
         <label><input type="checkbox" class="platform-checkbox" value="dr1" />DR1</label>
-        <label><input type="checkbox" class="checkbox-all" id="select-all" value="all" /><span id="selectAllButton">Vælg alle</span></label>
+        <label><input type="checkbox" class="checkbox-all" id="select-all" value="all" /><span id="selectAllButton">Vælg
+            alle</span></label>
       </div>
     </div>
   </header>
