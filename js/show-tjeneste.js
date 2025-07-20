@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         hbo: "https://play.max.com/",
         prime: "https://www.primevideo.com/offers/nonprimehomepage/ref=dv_web_force_root",
         viaplay: "https://viaplay.dk/dk-da/",
+        skyshowtime: "https://www.skyshowtime.com/",
         tv2: "https://play.tv2.dk/",
         dr1: "https://www.dr.dk/drtv/"
     };
@@ -37,8 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const logoCount = selectedPlatforms.length;
         const logoWidth = logoCount > 0 ? Math.min(15, 15 / Math.sqrt(logoCount + 2) + 5) : 15;
-
-        const website = ["dr1", "tv2", "disney", "viaplay", "hbo", "netflix", "prime"];
 
         // Display logos
         selectedPlatforms.forEach(platform => {
